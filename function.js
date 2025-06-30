@@ -13,3 +13,7 @@ function replace(str, charToReplace, strReplacement) {
   }
   return result;
 }
+
+function stringLengthEven(str) {
+  return str.length % 2 == 0;
+}
