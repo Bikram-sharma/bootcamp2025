@@ -41,3 +41,32 @@ function alternateSqSum(arr) {
 
   return arr.reduce((a, n, i) => ((i + 1) % 2 === 0 ? a + n * n : a + n), 0);
 }
+
+function isAValidMessage(message) {
+  if (!message.length) return true;
+  if (!isNaN(message.slice(-1)) || isNaN(message[0])) return false;
+
+  let messageArray = [];
+  let char = "";
+  let num = "";
+
+  for (let i = 0; i < message.length; i += 1) {
+    if (isNaN(message[i])) {
+      num.length ? messageArray.push(num) : "";
+      num = "";
+      char += message[i];
+    } else {
+      char.length ? messageArray.push(char) : "";
+      char = "";
+      num += message[i];
+    }
+  }
+  num.length ? messageArray.push(num) : "";
+  char.length ? messageArray.push(char) : "";
+
+  for (let j = 0; j < messageArray.length; j += 2) {
+    let length = messageArray[j];
+    if (+length !== messageArray[j + 1].length) return false;
+  }
+  return true;
+}
