@@ -17,3 +17,7 @@ function replace(str, charToReplace, strReplacement) {
 function stringLengthEven(str) {
   return str.length % 2 == 0;
 }
+
+function findRabbit(arr) {
+  return arr.map((word) => word.toLowerCase()).indexOf("rabbit");
+}
