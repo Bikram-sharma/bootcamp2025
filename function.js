@@ -21,3 +21,16 @@ function stringLengthEven(str) {
 function findRabbit(arr) {
   return arr.map((word) => word.toLowerCase()).indexOf("rabbit");
 }
+
+function compoundArray(a, b) {
+  // Your code here
+  let result = [];
+
+  let length = Math.max(a.length, b.length);
+
+  for (let i = 0; i < length; i += 1) {
+    a[i] !== undefined ? result.push(a[i]) : "";
+    b[i] !== undefined ? result.push(b[i]) : "";
+  }
+  return result;
+}
