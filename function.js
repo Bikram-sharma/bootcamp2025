@@ -34,3 +34,10 @@ function compoundArray(a, b) {
   }
   return result;
 }
+
+function alternateSqSum(arr) {
+  // happy coding :D
+  if (arr.length == 0) return 0;
+
+  return arr.reduce((a, n, i) => ((i + 1) % 2 === 0 ? a + n * n : a + n), 0);
+}
