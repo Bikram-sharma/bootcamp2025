@@ -72,3 +72,20 @@ function isAValidMessage(message) {
 }
 
 const last = (xs) => (xs.length ? xs[xs.length - 1] : null);
+
+function group(arr) {
+  if (!arr.length) return [];
+
+  const result = [];
+  const seen = new Set();
+
+  arr.forEach((num) => {
+    if (!seen.has(num)) {
+      const group = arr.filter((x) => x === num);
+      result.push(group);
+      seen.add(num);
+    }
+  });
+
+  return result;
+}
