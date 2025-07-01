@@ -70,3 +70,5 @@ function isAValidMessage(message) {
   }
   return true;
 }
+
+const last = (xs) => (xs.length ? xs[xs.length - 1] : null);
