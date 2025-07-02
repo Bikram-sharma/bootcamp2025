@@ -107,3 +107,27 @@ function productArray(numbers) {
   });
   return result;
 }
+
+function parseF(input) {
+  const num = Number(input);
+
+  if (typeof input === "boolean") {
+    return null;
+  }
+
+  if (typeof input === "object" && input !== null) {
+    return null;
+  }
+
+  if (typeof input === "string") {
+    if (input.trim() === "") {
+      return null;
+    }
+  }
+
+  if (isNaN(num) || !isFinite(num)) {
+    return null;
+  }
+
+  return Number(num.toFixed(1));
+}
