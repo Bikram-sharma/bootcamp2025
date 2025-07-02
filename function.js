@@ -96,6 +96,9 @@ function zipvalidate(postcode) {
   return true;
 }
 
+
+// trying to push again
+
 function productArray(numbers) {
   //your code here
   let result = [];
