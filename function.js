@@ -95,3 +95,15 @@ function zipvalidate(postcode) {
   if ("05789".includes(postcode[0]) || isNaN(postcode)) return false;
   return true;
 }
+
+function productArray(numbers) {
+  //your code here
+  let result = [];
+  numbers.forEach((num, index) => {
+    const array = [...numbers];
+    array.splice(index, 1);
+    let value = array.reduce((a, n) => a * n, 1);
+    result.push(value);
+  });
+  return result;
+}
