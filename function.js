@@ -89,3 +89,9 @@ function group(arr) {
 
   return result;
 }
+
+function zipvalidate(postcode) {
+  if (!postcode.length || postcode.length !== 6) return false;
+  if ("05789".includes(postcode[0]) || isNaN(postcode)) return false;
+  return true;
+}
