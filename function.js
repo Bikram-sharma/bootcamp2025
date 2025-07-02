@@ -96,4 +96,41 @@ function zipvalidate(postcode) {
   return true;
 }
 
+
 // trying to push again
+
+function productArray(numbers) {
+  //your code here
+  let result = [];
+  numbers.forEach((num, index) => {
+    const array = [...numbers];
+    array.splice(index, 1);
+    let value = array.reduce((a, n) => a * n, 1);
+    result.push(value);
+  });
+  return result;
+}
+
+function parseF(input) {
+  const num = Number(input);
+
+  if (typeof input === "boolean") {
+    return null;
+  }
+
+  if (typeof input === "object" && input !== null) {
+    return null;
+  }
+
+  if (typeof input === "string") {
+    if (input.trim() === "") {
+      return null;
+    }
+  }
+
+  if (isNaN(num) || !isFinite(num)) {
+    return null;
+  }
+
+  return Number(num.toFixed(1));
+}
