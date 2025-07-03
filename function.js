@@ -133,3 +133,20 @@ function parseF(input) {
 
   return Number(num.toFixed(1));
 }
+
+const remainder = (D, d) => {
+  let i = 1;
+  let product = d;
+  while (D - product > d) {
+    product = d * i;
+    i++;
+  }
+  return D - product;
+};
+
+function equableTriangle(a, b, c) {
+  //Your code here!
+  return Math.pow(a, 2) + Math.pow(b, 2) == Math.pow(c, 2);
+}
+
+console.log(equableTriangle(5, 12, 13));
